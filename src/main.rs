@@ -11,7 +11,7 @@ fn main() {
       .body(String::from("Please verify your login using this link: https://traxon99.github.io/"))
       .unwrap(); 
     
-    let creds = Credentials::new("jacksony.testauth@gmail.com".to_string(), password::get_pass_from_file("/Users/jacksonyanek/Documents/Files/rust/email_verification/src/password.txt")); 
+    let creds = Credentials::new("jacksony.testauth@gmail.com".to_string(), password::get_pass_from_file("src/password.txt")); 
     
     // Open a remote connection to gmail 
     let mailer = SmtpTransport::relay("smtp.gmail.com") 
